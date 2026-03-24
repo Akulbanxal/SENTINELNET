@@ -1,0 +1,46 @@
+{
+  "name": "sentinelnet-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for SentinelNet",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:audit": "hardhat test test/AuditRegistry.test.js",
+    "test:escrow": "hardhat test test/AgentEscrow.test.js",
+    "test:trade": "hardhat test test/TradeExecutor.test.js",
+    "test:marketplace": "hardhat test test/AgentMarketplace.test.js",
+    "test:reputation": "hardhat test test/ReputationRegistry.test.js",
+    "deploy": "hardhat run scripts/deployAll.js",
+    "deploy:local": "hardhat run scripts/deployAll.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deployAll.js --network sepolia",
+    "deploy:legacy": "hardhat run scripts/deploy.js --network sepolia",
+    "verify": "hardhat verify --network sepolia",
+    "node": "hardhat node",
+    "clean": "hardhat clean",
+    "coverage": "hardhat coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.3.10",
+    "hardhat": "^2.19.4",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5",
+    "typechain": "^8.3.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
+    "ethers": "^6.9.2"
+  }
+}

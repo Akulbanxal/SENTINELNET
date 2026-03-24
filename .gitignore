@@ -1,0 +1,73 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+.nyc_output
+
+# Production
+build/
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Hardhat
+cache/
+artifacts/
+typechain-types/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Next.js
+.next/
+out/
+
+# Database
+*.db
+*.sqlite
+
+# Temporary files
+*.tmp
+.cache/
+
+# Contract deployment artifacts
+deployments/
+contracts/artifacts/
+contracts/cache/
+
+# Agent logs
+agents/logs/
+agents/*.log
+
+# Backup files
+*.backup
+*.bak
+
+# Docker
+.docker/
+docker-compose.override.yml
