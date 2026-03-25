@@ -10,17 +10,11 @@ const __dirname = dirname(__filename);
 // Load .env from root directory
 dotenv.config({ path: resolve(__dirname, '../../.env') });
 
-// Validate required environment variables (only in production)
+// Validate required environment variables (only critical ones)
 const requiredEnvVars = ['SEPOLIA_RPC_URL'];
 
-// Only enforce in production
-if (process.env.NODE_ENV === 'production') {
-  requiredEnvVars.push(
-    'AGENT_MARKETPLACE_ADDRESS',
-    'AUDIT_REGISTRY_ADDRESS',
-    'TRADE_EXECUTOR_ADDRESS'
-  );
-}
+// For production, we can use demo addresses if contracts not deployed yet
+// Only fail if trying to use actual contract functions
 
 for (const envVar of requiredEnvVars) {
   if (!process.env[envVar]) {

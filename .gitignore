@@ -71,3 +71,4 @@ agents/*.log
 # Docker
 .docker/
 docker-compose.override.yml
+.vercel
